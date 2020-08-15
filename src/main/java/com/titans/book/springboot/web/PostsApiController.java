@@ -7,6 +7,7 @@ import com.titans.book.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
@@ -27,6 +28,13 @@ public class PostsApiController {
     public PostsResponseDto findById(@PathVariable Long id){
         return postsService.findById(id);
     }
+
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id){
+        postsService.delete(id);
+        return id;
+    }
+
 
 }
 

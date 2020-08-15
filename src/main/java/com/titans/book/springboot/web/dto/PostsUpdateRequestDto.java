@@ -1,6 +1,5 @@
 package com.titans.book.springboot.web.dto;
 
-import com.titans.book.springboot.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +9,7 @@ import lombok.NoArgsConstructor;
 public class PostsUpdateRequestDto {
     private String title;
     private String content;
+
     @Builder
     public PostsUpdateRequestDto(String title, String content){
         this.title = title;
