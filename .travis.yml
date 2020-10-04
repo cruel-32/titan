@@ -15,7 +15,7 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r titans
+  - zip -r titans *
   - mkdir -p deploy
   - mv titans.zip deploy/titans.zip
 
